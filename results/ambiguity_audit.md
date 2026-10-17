@@ -77,4 +77,9 @@
 ---
 
 ## 8. Future Feature Suggestions Mixed with Current-State Evidence
-- **Paragraph
+- **Paragraph ID(s):** P14, P15
+- **Excerpt:**
+  - "Honestly, a reservation dashboard that fixed all of this would be amazing."
+  - "If there were a 'running late' button, I would probably use it every time I was delayed."
+- **Defect Type:** Potential Requirements Contamination
+- **Unsafe Decision:** An implementation team could incorrectly treat participant suggestions as validated requirements rather than evidence about the current process being studied.
