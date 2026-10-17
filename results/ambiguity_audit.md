@@ -10,6 +10,7 @@
 - **Defect Type:** Direct Contradiction
 - **Unsafe Decision:** The implementation cannot safely determine when a reservation becomes eligible for release.
 
+true positive; In P06 the staff says the period is 15 minutes, but in P12 student says she was told it was 20
 ---
 
 ## 2. Undefined Meaning of "Recorded Hold"
@@ -21,6 +22,7 @@
 - **Defect Type:** Ambiguity
 - **Unsafe Decision:** It is unclear what actions, records, or system state constitute a valid hold and prevent release.
 
+false positive; I think it is clear that staff can arbitrarily put it on hold, when they don't want to release it
 ---
 
 ## 3. Release Timing vs. Staff Discretion
@@ -31,6 +33,7 @@
 - **Defect Type:** Ambiguity
 - **Unsafe Decision:** The conditions under which staff may continue holding equipment after the release threshold are not defined.
 
+false positive; it is clear that the staff should have the power to do this based on judgement and common sense, this is the correct behavior
 ---
 
 ## 4. Waitlist Eligibility Trigger Unclear
@@ -41,6 +44,7 @@
 - **Defect Type:** Incompleteness
 - **Unsafe Decision:** The event that makes equipment available to the waitlist and triggers notification is not specified.
 
+true positive; there is no clear explanation of how the waitlist and notifications work
 ---
 
 ## 5. Ready Status Ownership Undefined
@@ -52,6 +56,7 @@
 - **Defect Type:** Incompleteness
 - **Unsafe Decision:** The source of truth and workflow for determining that a kit is ready for checkout are undefined.
 
+true positive; staff is going over the paperwork process for the technicians to declare readiness, and it is a valid concern because he does not know the answer.
 ---
 
 ## 6. Check-In State Not Fully Specified
@@ -63,6 +68,7 @@
 - **Defect Type:** Ambiguity
 - **Unsafe Decision:** It is unclear whether "checked in," "picked up," and "reservation completed" represent distinct states or the same state.
 
+true positive; they go over the process of the student arriving at the desk, but don't clarify what these terms mean.
 ---
 
 ## 7. Manual Hold Extension Rules Missing
@@ -74,6 +80,7 @@
 - **Defect Type:** Incompleteness
 - **Unsafe Decision:** The criteria, authorization, and limits for creating or extending holds are not defined.
 
+false positive; the manager has authority to make these decisions, and then input them into the system. That is not the responsibility of the system to decide when holds are allowed.
 ---
 
 ## 8. Future Feature Suggestions Mixed with Current-State Evidence
@@ -83,3 +90,5 @@
   - "If there were a 'running late' button, I would probably use it every time I was delayed."
 - **Defect Type:** Potential Requirements Contamination
 - **Unsafe Decision:** An implementation team could incorrectly treat participant suggestions as validated requirements rather than evidence about the current process being studied.
+
+true positive; this is a knee-jerk reaction where the student wants some extra feature that might not actually be relevant
