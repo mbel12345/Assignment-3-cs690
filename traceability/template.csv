@@ -1,1 +1,4 @@
 evidence_id,requirement_id,acceptance_criterion_id,test_name
+P06,R-1,AC-1,test_ac_1_reservation_is_held
+P09,R-2,AC-2,test_ac_2_reservation_is_released
+P19,R-3,AC-3,test_ac_3_can_be_offered_to_waitlist
